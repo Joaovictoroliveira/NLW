@@ -86,3 +86,14 @@ function toggleSelect(event) {
     // pegar o botão clicado
     input.value = button.dataset.value;
 }
+
+function validate(event) {
+    const latitude = document.querySelector('#lat').value;
+    const longitude = document.querySelector('#lng').value;
+
+    // validar se lat e len estão preenchidos
+    if(latitude == '' && longitude == '') {
+        event.preventDefault();
+        alert('Selecione um ponto no mapa');
+    }
+}

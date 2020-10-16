@@ -36,14 +36,14 @@
             </aside>
 
             <main class="animate-appear width-sidebar">
-                <form action="">
+                <form action="save-orphanage" method="post" onsubmit="validate(event)">
                     <fieldset>
                         <legend>Dados</legend>
 
                         <div class="map-container">
                             <div id="mapid"></div>
-                            <input type="hidden" name="lat">
-                            <input type="hidden" name="lng">
+                            <input type="hidden" name="lat" id="lat">
+                            <input type="hidden" name="lng" id="lng">
 
                             <footer>
                                 <a href="#" id="select-point">
@@ -72,7 +72,7 @@
                             <div class="images-upload" id="images" required>
 
                                 <div class="new-upload">
-                                    <input type="text" name="images" placeholder="Cole o link da foto aqui">
+                                    <input type="text" name="images" placeholder="Cole o link da foto aqui" required type="url">
                                     <span onclick="deleteField(event)"><img src="/images/remove-file.svg" alt="remover foto"></span>
                                 </div>
                             </div>
